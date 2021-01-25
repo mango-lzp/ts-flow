@@ -12,6 +12,10 @@ module.exports={
       {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader'
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },    //module.rules loader
@@ -20,7 +24,9 @@ module.exports={
   //     template: 'index.html'
   //   })
   // ],    //插件
-  devServer:{},   //开发服务器
+  devServer:{
+    hot: true
+  },   //开发服务器
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
