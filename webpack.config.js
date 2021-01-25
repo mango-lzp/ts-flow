@@ -8,32 +8,34 @@ module.exports={
       path: path.resolve(__dirname, 'dist')  //出口文件路径
   },
   module: {
-    rules: {
-      test: /\.tsx?$/,
-      loader: 'awesome-typescript-loader'
-    }
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader'
+      }
+    ]
   },    //module.rules loader
-  plugins:[
-    new HtmlWebpackPlugin({
-      template: 'index.html'
-    })
-  ],    //插件
+  // plugins:[
+  //   new HtmlWebpackPlugin({
+  //     template: 'index.html'
+  //   })
+  // ],    //插件
   devServer:{},   //开发服务器
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
-  externals: {
-    react: {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'react',
-      root: 'React',
-    },
-    'react-dom': {
-      commonjs: 'react-dom',
-      commonjs2: 'react-dom',
-      amd: 'react-dom',
-      root: 'ReactDOM'
-    }
-  }
+  // externals: {
+  //   react: {
+  //     commonjs: 'react',
+  //     commonjs2: 'react',
+  //     amd: 'react',
+  //     root: 'React',
+  //   },
+  //   'react-dom': {
+  //     commonjs: 'react-dom',
+  //     commonjs2: 'react-dom',
+  //     amd: 'react-dom',
+  //     root: 'ReactDOM'
+  //   }
+  // }
 };
