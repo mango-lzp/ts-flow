@@ -13,12 +13,13 @@ function Button() {
   const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
 
   // 使用数据训练模型
-  model.fit(xs, ys, {epochs: 10}).then(() => {
-    // 在该模型从未看到过的数据点上使用模型进行推理
-    (model.predict(tf.tensor2d([5], [1, 1])) as any)?.print()
-    // model.loss
-    //  打开浏览器开发工具查看输出
-  });
+  model.fit(xs, ys, {epochs: 10})
+    .then(() => {
+      // 在该模型从未看到过的数据点上使用模型进行推理
+      (model.predict(tf.tensor2d([5], [1, 1])) as any)?.print()
+      // model.loss
+      //  打开浏览器开发工具查看输出
+    });
   return (
     <div>
       按钮12355
