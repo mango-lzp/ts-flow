@@ -17,6 +17,7 @@
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
+    "skipLibCheck": true,
     "outDir": "dist"
   },
   "include": [
